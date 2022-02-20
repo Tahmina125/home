@@ -1,0 +1,10 @@
+@use '../custom' as *;
+
+#our_app{
+    padding: 7rem 0;
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+
+    @include media-breakpoint-up(md){
+        padding: 10rem 0 7rem;
+    }
+}

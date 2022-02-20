@@ -1,0 +1,35 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.location{
+    position: relative;
+
+    .location_text{
+        position: absolute;
+        @include shadow;
+
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+
+        @include media-breakpoint-up(md){
+            top: 10%;
+            left: 6%;
+            width: 19.1rem;
+        }
+        @include media-breakpoint-up(lg){
+            width: 29rem;
+        }
+        @include media-breakpoint-up(xl){
+            top: 14%;
+            left: 10%;
+            width: 36rem;
+        }
+
+        h3{
+            font-size: 1.625rem;
+        }
+
+    }
+}

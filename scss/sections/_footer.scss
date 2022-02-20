@@ -1,0 +1,46 @@
+@use '../custom' as *;
+
+#footer{
+    padding: 5rem 2rem;
+    margin-top: -2rem;
+    clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+    
+    @include media-breakpoint-up(md){
+        padding: 8rem 0;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);  
+    }
+
+    .footer_img{
+        width: 13rem;
+        padding: 3rem 0;
+
+        @include media-breakpoint-up(md){
+            width: fit-content; 
+            padding: 0;
+        }
+        
+    }
+
+    .footer_middle{
+
+        .middle_img{
+            width: 10rem;
+
+            @include media-breakpoint-up(md){
+                width: 12rem; 
+            }
+        }
+
+        p{
+            margin-top: 1rem;
+        }
+
+        .mybtn{
+            display: block; 
+
+            @include media-breakpoint-down(md){
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

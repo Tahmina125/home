@@ -1,0 +1,42 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#tech_kitchen{
+    padding: 6rem 0;
+    position: relative;
+    clip-path: polygon(0 0, 100% 1%, 100% 1000%, 0% 100%);
+
+        @include media-breakpoint-up(lg) {
+            padding: 7rem 0;
+        }
+
+    .btn{
+        @include media-breakpoint-up(lg) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .tech-items{
+      padding-top: 1rem;
+
+        .tech-box{
+                
+            @include shadow;
+
+            .tech-image{
+                clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%);
+            }
+
+            .tech-info{
+                
+                p{
+
+                    @include media-breakpoint-down(md) {
+                        margin: 0 3rem 1rem;
+                    }
+                    
+                }
+            } 
+        }
+    }
+}

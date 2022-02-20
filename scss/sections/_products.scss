@@ -1,0 +1,157 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#product{
+  height: 96rem;
+  background: $primary;
+  color: $white;
+  padding-top: 7rem;
+  
+
+  @include media-breakpoint-up(md){
+    height: 136rem;
+  }
+
+  @include media-breakpoint-up(lg){
+    height: 40.2rem;
+    clip-path: polygon(0 0, 100% 4%, 100% 1000%, 0% 100%);
+  }
+    
+  .product_container{
+      position: relative;
+      max-width: 75rem;
+      margin: 0 auto;
+      
+      
+    
+      .product_content{
+
+        @include media-breakpoint-up(lg){
+          display: flex;
+          justify-content: space-between;
+        }
+
+        h3{
+          text-transform: uppercase;
+        }
+      }
+
+      .product_items{
+        position: absolute;
+        top: 10rem;
+        left: 5%;
+        right: 5%;
+
+        
+  
+          @include media-breakpoint-up(lg){
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+          }
+      
+        .product_box{
+          flex-basis: 31.5%;
+          background: $white;
+          color: $primary;
+          text-align: center;
+          box-shadow: 0.1rem .4rem 1.2rem .2rem rgba(0, 0, 0, 0.3);
+          margin-bottom: 2rem;
+
+          .product_image{
+            clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+          }
+
+
+          .product-info{
+
+              padding: 2rem 2.1rem;
+
+            p{
+                font-size: 1rem;
+            }
+          }
+        }
+      }
+    }  
+  }
+
+
+
+
+
+
+
+
+
+
+
+/*
+#product{
+    height: 100rem;
+    padding: 6rem 0;
+    //position: relative;
+    clip-path: polygon(0 0, 100% 1%, 100% 1000%, 0% 100%);
+
+        @include media-breakpoint-up(md) {
+            clip-path: polygon(0 0, 100% 4%, 100% 1000%, 0% 100%);
+            height: 32rem;
+        }
+        @include media-breakpoint-up(lg) {
+            height: 36rem;
+        }
+        @include media-breakpoint-up(xxl) {
+            height: 39rem;
+        }
+
+    .product-items{
+
+        position: absolute;
+        top: 15rem;
+        left: 0;
+        right: 0;
+
+        @include media-breakpoint-up(md) {
+            top: 10rem;
+            right: 5%;
+        }
+
+
+        .product-box{
+            width: 92%;
+            height: 80%;
+            margin: 0 1rem;
+            @include shadow;
+
+            @include media-breakpoint-up(md) {
+                width: 100%;
+            }    
+
+            .product-image{
+                clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%);
+            }
+
+            .product-info{
+                padding: 1rem;
+
+                @include media-breakpoint-up(md) {
+                    padding: 1rem;
+                }
+                
+                p{
+                    font-size: 0.875rem;
+
+                    @include media-breakpoint-down(md) {
+                        font-size: 1rem;
+                        margin: 0 3rem 1rem;
+                    }
+                    
+                }
+            } 
+        }
+
+    }
+}
+
+*/

@@ -1,0 +1,130 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#domain{
+  background: $indigo-light;
+  height: 50rem;
+  padding: 5rem 0 35rem;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: 38rem;
+    padding: 9rem 0 35rem;
+  }
+
+  .domain_wrapper{
+    position: relative;
+    
+    .domain_content{
+      display: block;
+      width: 100%;
+
+      @include media-breakpoint-up(md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 48%;
+        height: 100%;
+      }
+
+    }
+    .owl-carousel .owl-stage {
+      left: 8%;
+
+      @include media-breakpoint-up(lg) {
+        left: -37%;
+      }
+
+
+  }
+  .owl-item {
+      margin-right: 4rem;
+  }
+
+    #domain_items{
+      position: absolute;
+      top: 120%;
+      
+
+      @include media-breakpoint-up(md){
+        top: 0;
+        right: -50%;
+      }
+      
+
+      .domain_box{
+        height: auto;
+        @include shadow;
+        padding: 2.5rem;     
+
+        .domain_image{
+          width: 9rem;
+          height: 9.18rem;
+          display: block;
+          margin: 0 auto;
+        }
+
+        .domain_info{
+
+          h5{
+            margin-top: 2.5rem;
+            margin-bottom: 0.625rem;
+            font-size: 1.25rem;
+          }
+
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// CUSTOMIZIED OWL CAROUSEL
+
+#domain{
+  // OWL CAROUSEL DOT 
+  .owl-theme{
+
+    .owl-dots{
+      text-align: left;
+
+      .owl-dot{
+
+        span{
+          width: 0.875rem;
+          height: 0.875rem;
+          background: $gray-200;
+        }
+      }
+    }
+  }
+
+  .owl-stage{
+    width: 2000rem !important;
+    left: -32%;
+
+    .owl-item{
+      width: 17.625rem !important;
+      margin-right: 1.25rem;
+      opacity: 0.4;
+
+      @include media-breakpoint-up(lg) {
+        width: 17rem !important;
+      }
+      @include media-breakpoint-up(xxl) {
+        margin-right: 2.5rem;
+      }
+
+      &.active.center{
+        padding-bottom: 2rem;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+#domain .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $white;
+}

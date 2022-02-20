@@ -1,0 +1,51 @@
+@use '../custom' as *;
+
+#story{
+    max-width: 41rem;
+    margin: 3rem auto;
+
+    .text{
+        font-size: 1.25rem;
+        padding: 0 2rem;
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.3rem;
+        }
+        
+    }
+ 
+  .read-more-btn {
+        max-width: 8rem;
+        margin: 0 auto;
+        background: transparent;
+        color: $secondary;
+        border: none;
+        outline: none;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 1rem;
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.3rem;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }  
+}
+.moreText {
+    display: none;
+}
+
+.text.show-more{ 
+
+    .moreText{
+        display: inline;
+    } 
+    
+    .dots {
+        display: none;
+    }
+    
+}

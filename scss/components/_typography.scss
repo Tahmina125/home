@@ -1,0 +1,62 @@
+@use '../custom' as *;
+
+// CUSTOM ANIMATION DURATION FOR AOS
+
+// body[data-aos-duration='4000'] [data-aos], 
+// [data-aos][data-aos][data-aos-duration='4000']{
+//     transition-duration: 4000ms;
+// }
+
+.display-2{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+
+    @include media-breakpoint-up(sm){
+        font-size: 2.625rem;
+    }
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+h3{
+    
+    font-size: 1.75rem;
+
+
+    @include media-breakpoint-up(lg) {
+        font-size: 2.25rem;
+    }
+}
+h4{
+    font-size: 1.25rem;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+    }
+}
+p{
+    //font-size: .9rem;
+    line-height: 1.7;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+    }
+}
+a{
+    @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+    }
+}
+
+.lead{
+    @include media-breakpoint-down(lg) {
+        font-size: 1rem;
+    }
+    @include media-breakpoint-down(md) {
+        width: 75%;
+    }
+}

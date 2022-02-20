@@ -1,0 +1,38 @@
+@use '../custom' as *;
+
+#our_stack{
+    padding: 7rem 0;
+    
+    .stack_content{
+        margin-bottom: 4rem;
+    }
+    
+    .stack_grid{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 2rem;
+        
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(3, auto);
+        }
+        
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(6, auto);
+        }
+
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(9, auto);
+        }
+       
+        .stack_img{
+
+            width: 4.5rem;
+            height: 3rem;
+            margin: 0 auto;
+
+            @include media-breakpoint-up(lg) {
+                @include make-col(8);
+            }
+        }
+    }
+}

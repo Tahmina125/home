@@ -1,0 +1,14 @@
+@use '../custom' as *;
+
+.intro-section{
+    padding: 13rem 0 0 0;
+    width: 58%;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md){
+        .img-box{
+            width: 55%;
+            margin: 0 auto;
+        }
+    }
+}

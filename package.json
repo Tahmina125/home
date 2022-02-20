@@ -1,0 +1,24 @@
+{
+  "name": "krapm_new",
+  "version": "1.0.0",
+  "description": "Learn For Practice",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assests/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "aos": "^3.0.0-beta.6",
+    "autoprefixer": "^10.3.1",
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0",
+    "owl.carousel2": "^2.2.2",
+    "postcss-cli": "^8.3.1",
+    "smooth-scroll": "^16.1.3"
+  }
+}
